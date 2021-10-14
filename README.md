@@ -30,6 +30,7 @@ $ roslaunch snake_robot demo.launch
 
 $ roslaunch snake_robot_moveit_config demo.launch rviz_tutorial:=true
 
+<br>
 
 运行snake_robot2机器人的moveit
 
