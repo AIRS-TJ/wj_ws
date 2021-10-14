@@ -25,6 +25,7 @@ $ source devel/setup.bash
 $ roslaunch snake_robot demo.launch
 
 
+
 运行snake_robot机器人的moveit
 
 $ roslaunch snake_robot_moveit_config demo.launch rviz_tutorial:=true
