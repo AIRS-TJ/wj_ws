@@ -1,6 +1,6 @@
-# 依赖
+# 准备
 
-要事先安装好moveit
+moveit
 
 moveit安装教程参考：
 http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
@@ -24,9 +24,11 @@ $ source devel/setup.bash
 
 $ roslaunch snake_robot demo.launch
 
+
 运行snake_robot机器人的moveit
 
 $ roslaunch snake_robot_moveit_config demo.launch rviz_tutorial:=true
+
 
 运行snake_robot2机器人的moveit
 
