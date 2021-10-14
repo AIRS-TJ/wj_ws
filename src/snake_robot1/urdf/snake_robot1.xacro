@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot name="snake_robot1" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find snake_robot1)/urdf/base_rail1.xacro" />
+
+  <xacro:macro name="snake_robot1" params="parent *origin name:=snake_robot1 base_joint_type:=prismatic">
+  
+    <xacro:base1 parent="${parent}" name="base1" base_joint_type="${base_joint_type}">
+      <xacro:insert_block name="origin" />
+    </xacro:base1> 
+
+    <xacro:rail1 parent="base1_link" name="rail1_1">
+      <origin xyz="0 0 0.1235" rpy="0 0 0"/>
+    </xacro:rail1> 
+
+    <xacro:rail1 parent="rail1_1_link5" name="rail1_2" >
+      <origin xyz="0 0 0.021" rpy="0 0 1.57"/>
+    </xacro:rail1> 
+
+    <xacro:rail1 parent="rail1_2_link5" name="rail1_3" >
+      <origin xyz="0 0 0.021" rpy="0 0 1.57"/>
+    </xacro:rail1> 
+
+    <xacro:rail1 parent="rail1_3_link5" name="rail1_4" >
+      <origin xyz="0 0 0.021" rpy="0 0 1.57"/>
+    </xacro:rail1> 
+
+    <xacro:rail1 parent="rail1_4_link5" name="rail1_5" >
+      <origin xyz="0 0 0.021" rpy="0 0 1.57"/>
+    </xacro:rail1> 
+
+    <xacro:rail1 parent="rail1_5_link5" name="rail1_6" >
+      <origin xyz="0 0 0.021" rpy="0 0 1.57"/>
+    </xacro:rail1> 
+  </xacro:macro>
+
+</robot>

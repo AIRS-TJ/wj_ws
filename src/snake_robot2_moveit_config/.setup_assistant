@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: snake_robot2
+    relative_path: urdf/snake_robot2_demo.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/snake_robot2.srdf
+  CONFIG:
+    author_name: tj
+    author_email: tianjiaoliao@cuhk.edu.cn
+    generated_timestamp: 1632821196

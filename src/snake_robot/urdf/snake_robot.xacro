@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot name="snake_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find snake_robot1)/urdf/snake_robot1.xacro" />
+  <xacro:include filename="$(find snake_robot2)/urdf/snake_robot2.xacro" />
+
+  <link name="base_link" />
+  <xacro:snake_robot1 parent="base_link" name="snake_robot1" base_joint_type="prismatic">
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+  </xacro:snake_robot1> 
+
+  <xacro:snake_robot2 parent="base_link" name="snake_robot2" base_joint_type="prismatic">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:snake_robot2> 
+
+</robot>

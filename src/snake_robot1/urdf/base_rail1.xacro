@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="base_rail1">
+    <xacro:macro name="base1" params="parent *origin name:=base base_joint_type:=prismatic">
+        <link
+            name="${name}_link">
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://snake_robot1/meshes/base_link.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.75294 0.75294 0.75294 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://snake_robot1/meshes/base_link.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+        name="${name}_joint"
+        type="${base_joint_type}">
+        <xacro:insert_block name="origin" />
+        <parent
+            link="${parent}" />
+        <child
+            link="${name}_link" />
+        <axis
+            xyz="0 0 1" />
+        <limit
+        lower="-0.5"
+        upper="0.5"
+        effort="0"
+        velocity="0" />
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="rail1" params="parent *origin name:=rail">
+        <link
+        name="${name}_link1">
+        <inertial>
+        <origin
+            xyz="7.2882E-09 3.4329E-09 0.010539"
+            rpy="0 0 0" />
+        <mass
+            value="0.024744" />
+        <inertia
+            ixx="1.4926E-05"
+            ixy="-1.6133E-09"
+            ixz="2.3902E-13"
+            iyy="1.4062E-05"
+            iyz="-9.0592E-13"
+            izz="2.7906E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link1.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.89804 0.91765 0.92941 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link1.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <joint
+        name="${name}_joint1"
+        type="revolute">
+        <xacro:insert_block name="origin" />
+        <parent
+        link="${parent}" />
+        <child
+        link="${name}_link1" />
+        <axis
+        xyz="-1 0 0" />
+        <limit
+        lower="-0.17"
+        upper="0.17"
+        effort="0"
+        velocity="0" />
+    </joint>
+    <link
+        name="${name}_link2">
+        <inertial>
+        <origin
+            xyz="-3.433E-09 7.2882E-09 0.010539"
+            rpy="0 0 0" />
+        <mass
+            value="0.024744" />
+        <inertia
+            ixx="1.4062E-05"
+            ixy="1.6133E-09"
+            ixz="9.0592E-13"
+            iyy="1.4926E-05"
+            iyz="2.3902E-13"
+            izz="2.7906E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link2.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.89804 0.91765 0.92941 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link2.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <joint
+        name="${name}_joint2"
+        type="revolute">
+        <origin
+        xyz="0 0 0.021"
+        rpy="0 0 0" />
+        <parent
+        link="${name}_link1" />
+        <child
+        link="${name}_link2" />
+        <axis
+        xyz="0 -1 0" />
+        <limit
+        lower="-0.17"
+        upper="0.17"
+        effort="0"
+        velocity="0" />
+    </joint>
+    <link
+        name="${name}_link3">
+        <inertial>
+        <origin
+            xyz="7.2882E-09 3.4329E-09 0.010539"
+            rpy="0 0 0" />
+        <mass
+            value="0.024744" />
+        <inertia
+            ixx="1.4926E-05"
+            ixy="-1.6133E-09"
+            ixz="2.3902E-13"
+            iyy="1.4062E-05"
+            iyz="-9.0592E-13"
+            izz="2.7906E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link3.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.89804 0.91765 0.92941 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link3.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <joint
+        name="${name}_joint3"
+        type="revolute">
+        <origin
+        xyz="0 0 0.021"
+        rpy="0 0 0" />
+        <parent
+        link="${name}_link2" />
+        <child
+        link="${name}_link3" />
+        <axis
+        xyz="1 0 0" />
+        <limit
+        lower="-0.17"
+        upper="0.17"
+        effort="0"
+        velocity="0" />
+    </joint>
+    <link
+        name="${name}_link4">
+        <inertial>
+        <origin
+            xyz="-3.433E-09 7.2882E-09 0.010539"
+            rpy="0 0 0" />
+        <mass
+            value="0.024744" />
+        <inertia
+            ixx="1.4062E-05"
+            ixy="1.6133E-09"
+            ixz="9.0592E-13"
+            iyy="1.4926E-05"
+            iyz="2.3902E-13"
+            izz="2.7906E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link4.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.89804 0.91765 0.92941 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link4.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <joint
+        name="${name}_joint4"
+        type="revolute">
+        <origin
+        xyz="0 0 0.021"
+        rpy="0 0 0" />
+        <parent
+        link="${name}_link3" />
+        <child
+        link="${name}_link4" />
+        <axis
+        xyz="0 -1 0" />
+        <limit
+        lower="-0.17"
+        upper="0.17"
+        effort="0"
+        velocity="0" />
+    </joint>
+    <link
+        name="${name}_link5">
+        <inertial>
+        <origin
+            xyz="7.2882E-09 3.4329E-09 0.010539"
+            rpy="0 0 0" />
+        <mass
+            value="0.024744" />
+        <inertia
+            ixx="1.4926E-05"
+            ixy="-1.6133E-09"
+            ixz="2.3902E-13"
+            iyy="1.4062E-05"
+            iyz="-9.0592E-13"
+            izz="2.7906E-05" />
+        </inertial>
+        <visual>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link5.STL" />
+        </geometry>
+        <material
+            name="">
+            <color
+            rgba="0.89804 0.91765 0.92941 1" />
+        </material>
+        </visual>
+        <collision>
+        <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+        <geometry>
+            <mesh
+            filename="package://snake_robot1/meshes/link5.STL" />
+        </geometry>
+        </collision>
+    </link>
+    <joint
+        name="${name}_joint5"
+        type="revolute">
+        <origin
+        xyz="0 0 0.021"
+        rpy="0 0 0" />
+        <parent
+        link="${name}_link4" />
+        <child
+        link="${name}_link5" />
+        <axis
+        xyz="1 0 0" />
+        <limit
+        lower="-0.17"
+        upper="0.17"
+        effort="0"
+        velocity="0" />
+        </joint>
+    </xacro:macro>
+</robot>
