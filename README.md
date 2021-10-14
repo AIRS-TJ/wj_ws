@@ -24,7 +24,7 @@ $ source devel/setup.bash
 
 $ roslaunch snake_robot demo.launch
 
-/
+/n
 
 运行snake_robot机器人的moveit
 
