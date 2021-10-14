@@ -36,3 +36,10 @@ $ roslaunch snake_robot_moveit_config demo.launch rviz_tutorial:=true
 
 $ roslaunch snake_robot2_moveit_config demo.launch rviz_tutorial:=true
 
+# MoveIt 设置
+
+参考：http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/setup_assistant/setup_assistant_tutorial.html
+
+$ roslaunch moveit_setup_assistant setup_assistant.launch
+
+
