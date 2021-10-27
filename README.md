@@ -42,4 +42,8 @@ $ roslaunch snake_robot2_moveit_config demo.launch rviz_tutorial:=true
 
 $ roslaunch moveit_setup_assistant setup_assistant.launch
 
+# gazebo
+
+$ roslaunch snake_robot2 gazebo.launch 
+
 
