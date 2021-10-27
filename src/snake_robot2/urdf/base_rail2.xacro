@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="base_rail2">
   <xacro:macro name="base2" params="parent *origin name:=base base_joint_type:=prismatic">
+
+    <xacro:macro name="rail2_default_inertial">
+        <inertial>
+                <mass value="0.018285" />
+                <inertia ixx="0.000008" ixy="0.0" ixz="0.0"
+                      iyy="0.000007" iyz="0.0"
+                      izz="0.000010" />
+        </inertial>
+    </xacro:macro>
+
     <link
       name="${name}_link">
       <visual>
@@ -48,20 +58,7 @@
   <xacro:macro name="rail2" params="parent *origin name:=rail">
     <link
       name="${name}_link1">
-      <inertial>
-        <origin
-          xyz="5.5313E-09 3.6738E-09 0.010533"
-          rpy="0 0 0" />
-        <mass
-          value="0.018285" />
-        <inertia
-          ixx="5.7939E-06"
-          ixy="-9.0258E-10"
-          ixz="-4.854E-14"
-          iyy="5.3329E-06"
-          iyz="-9.0945E-13"
-          izz="1.0221E-05" />
-      </inertial>
+      <xacro:rail2_default_inertial/>
       <visual>
         <origin
           xyz="0 0 0"
@@ -104,20 +101,7 @@
     </joint>
     <link
       name="${name}_link2">
-      <inertial>
-        <origin
-          xyz="-3.6738E-09 5.5318E-09 0.010533"
-          rpy="0 0 0" />
-        <mass
-          value="0.018285" />
-        <inertia
-          ixx="5.3329E-06"
-          ixy="9.0258E-10"
-          ixz="9.0945E-13"
-          iyy="5.7939E-06"
-          iyz="-4.854E-14"
-          izz="1.0221E-05" />
-      </inertial>
+      <xacro:rail2_default_inertial/>
       <visual>
         <origin
           xyz="0 0 0"
@@ -162,20 +146,7 @@
     </joint>
     <link
       name="${name}_link3">
-      <inertial>
-        <origin
-          xyz="5.5313E-09 3.6738E-09 0.010533"
-          rpy="0 0 0" />
-        <mass
-          value="0.018285" />
-        <inertia
-          ixx="5.7939E-06"
-          ixy="-9.0258E-10"
-          ixz="-4.854E-14"
-          iyy="5.3329E-06"
-          iyz="-9.0945E-13"
-          izz="1.0221E-05" />
-      </inertial>
+      <xacro:rail2_default_inertial/>
       <visual>
         <origin
           xyz="0 0 0"
@@ -220,20 +191,7 @@
     </joint>
     <link
       name="${name}_link4">
-      <inertial>
-        <origin
-          xyz="-3.6738E-09 5.5318E-09 0.010533"
-          rpy="0 0 0" />
-        <mass
-          value="0.018285" />
-        <inertia
-          ixx="5.3329E-06"
-          ixy="9.0258E-10"
-          ixz="9.0945E-13"
-          iyy="5.7939E-06"
-          iyz="-4.854E-14"
-          izz="1.0221E-05" />
-      </inertial>
+      <xacro:rail2_default_inertial/>
       <visual>
         <origin
           xyz="0 0 0"
@@ -278,20 +236,7 @@
     </joint>
     <link
       name="${name}_link5">
-      <inertial>
-        <origin
-          xyz="5.5313E-09 3.6738E-09 0.010533"
-          rpy="0 0 0" />
-        <mass
-          value="0.018285" />
-        <inertia
-          ixx="5.7939E-06"
-          ixy="-9.0258E-10"
-          ixz="-4.854E-14"
-          iyy="5.3329E-06"
-          iyz="-9.0945E-13"
-          izz="1.0221E-05" />
-      </inertial>
+      <xacro:rail2_default_inertial/>
       <visual>
         <origin
           xyz="0 0 0"
