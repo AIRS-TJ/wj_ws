@@ -1,4 +1,4 @@
-# 准备
+# 1. 准备
 
 moveit
 
@@ -8,9 +8,9 @@ http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/get
 
 # 编译
 
-$ cd ~
+	$ cd ~
 
-$ git clone https://github.com/AIRS-TJ/wj_ws.git
+	$ git clone https://github.com/AIRS-TJ/wj_ws.git
 
 $ cd wj_ws/
 
