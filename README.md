@@ -1,7 +1,5 @@
 # 1. 准备
 
-moveit
-
 moveit安装教程参考：
 http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
 
