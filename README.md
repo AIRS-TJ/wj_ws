@@ -3,6 +3,7 @@
 moveit安装教程参考：
 http://docs.ros.org/en/melodic/api/moveit_tutorials/html/doc/getting_started/getting_started.html
 
+环境：ros-melodic
 
 # 2. 编译
 
